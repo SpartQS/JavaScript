@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div class="textDiv">Этот текст будет обрезан до 10 символов</div>
+  <div class="textDiv">А этот тоже</div>
+  <div class="textDiv">И этот текст тоже будет обрезан</div>
+<script>
+  let textDivs = document.querySelectorAll('.textDiv');
+
+  textDivs.forEach(function(div) {
+    let text = div.textContent;
+    div.textContent = text.length > 10 ? text.slice(0, 10) + '...' : text;
+  });
+</script>
+
+</body>
+</html>

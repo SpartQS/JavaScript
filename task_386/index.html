@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <ul>
+        <li>text</li>
+        <li>text</li>
+        <li id="elem">text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+
+<script>
+    let elem1 = document.getElementById('elem');
+    let prevSibling1 = elem1.previousElementSibling;
+    prevSibling1.textContent += '!';
+</script>
+
+
+</html>

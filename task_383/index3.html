@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <ul id="elem">
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+
+<script>
+   let elem3 = document.getElementById('elem');
+    let children = elem3.children;
+
+    for (let child of children) {
+        child.textContent = child.textContent + '!';
+    }
+</script>
+
+</html>

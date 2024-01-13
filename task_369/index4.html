@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <input id="elem" data-length="5" onblur="checkInputLength()">
+
+  <script>
+    function checkInputLength() {
+      var inputElem = document.getElementById("elem");
+  
+      var expectedLength = parseInt(inputElem.getAttribute("data-length"));
+  
+      var actualLength = inputElem.value.length;
+
+      if (actualLength !== expectedLength) {
+        alert("Длина текста должна быть " + expectedLength + " символов.");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<input id="elem" type="text">
+<button onclick="disableInput()">Заблокировать</button>
+<button onclick="enableInput()">Отблокировать</button>
+
+<script>
+    function disableInput() {
+        let elem = document.getElementById('elem');
+        elem.disabled = true;
+    }
+
+    function enableInput() {
+        let elem = document.getElementById('elem');
+        elem.disabled = false;
+    }
+</script>
+
+
+    
+</html>

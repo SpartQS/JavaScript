@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <input type="radio" name="group" value="1" id="radio1">
+    <input type="radio" name="group" value="2" id="radio2">
+    <input type="radio" name="group" value="3" id="radio3">
+    <p id="output"></p>
+    <button id="button">Показать выбранное</button>
+    
+    <script>
+        let radios = document.querySelectorAll('input[type="radio"]');
+        let output = document.getElementById('output');
+        let button = document.getElementById('button');
+    
+        button.addEventListener('click', function() {
+            for (let radio of radios) {
+                if (radio.checked) {
+                    output.textContent = radio.value;
+                }
+            }
+        });
+    </script>
+    
+    
+</html>

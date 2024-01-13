@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <div id="elem" data-text="str">text</div>
+
+  <script>
+    var elem = document.getElementById("elem");
+  
+    elem.addEventListener("click", function() {
+      var dataTextValue = elem.getAttribute("data-text");
+      elem.textContent += dataTextValue;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<p id="myParagraph">Этот текст может быть изменен</p>
+<button onclick="toggleStyle('underline')">Подчеркнуть</button>
+<button onclick="toggleStyle('bold')">Сделать жирным</button>
+<button onclick="toggleStyle('red')">Сделать красным</button>
+
+<script>
+    let buttons = document.querySelectorAll('button');
+
+    for (let button of buttons) {
+        button.addEventListener('click', function() {
+            toggleStyle(this.getAttribute('data-style'));
+        });
+    }
+
+    function toggleStyle(style) {
+        let myParagraph = document.getElementById('myParagraph');
+
+        switch (style) {
+            case 'underline':
+                myParagraph.style.textDecoration = myParagraph.style.textDecoration === 'underline' ? 'none' : 'underline';
+                break;
+            case 'bold':
+                myParagraph.style.fontWeight = myParagraph.style.fontWeight === 'bold' ? 'normal' : 'bold';
+                break;
+            case 'red':
+                myParagraph.style.color = myParagraph.style.color === 'red' ? 'black' : 'red';
+                break;
+        }
+    }
+</script>
+
+
+
+</html>

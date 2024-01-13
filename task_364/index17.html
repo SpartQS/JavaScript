@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <input id="clickCountInput" type="text" value="0" readonly>
+  <p class="clickableParagraph">Абзац 1</p>
+  <p class="clickableParagraph">Абзац 2</p>
+  <p class="clickableParagraph">Абзац 3</p>
+<script>
+  let clickCountInput = document.getElementById('clickCountInput');
+  let clickableParagraphs = document.querySelectorAll('.clickableParagraph');
+  let clickCount = 0;
+  
+  clickableParagraphs.forEach(function(paragraph) {
+    paragraph.addEventListener('click', function() {
+      clickCount++;
+      clickCountInput.value = clickCount;
+    });
+  });
+</script>
+
+</body>
+</html>

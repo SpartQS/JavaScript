@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <input id="myInput" type="text">
+  <p id="myParagraph">Текст абзаца: </p>
+
+<script>
+  let myInput = document.querySelector('#myInput');
+  let myParagraph = document.querySelector('#myParagraph');
+
+  myInput.addEventListener('blur', function() {
+    myParagraph.textContent += myInput.value;
+  });
+</script>
+
+</body>
+</html>

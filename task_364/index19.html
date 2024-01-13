@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <input type="text" id="randomStringInput" readonly>
+  <button id="generateButton">Генерировать</button>
+<script>
+  let randomStringInput = document.getElementById('randomStringInput');
+  let generateButton = document.getElementById('generateButton');
+
+  generateButton.addEventListener('click', function() {
+    let randomString = Math.random().toString(36).substring(2, 10);
+    randomStringInput.value = randomString;
+  });
+</script>
+
+</body>
+</html>

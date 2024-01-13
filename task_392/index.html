@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <div id="elem">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div> 
+    
+    <script>
+        let elem = document.getElementById('elem');
+        let nodes = elem.childNodes;
+    
+        for (let i = 0; i < nodes.length; i++) {
+            console.log(nodes[i]);
+        }
+    </script>    
+
+</html>

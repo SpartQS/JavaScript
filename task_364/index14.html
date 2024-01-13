@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <p id="paragraph1">2</p>
+  <p id="paragraph2">5</p>
+  <p id="paragraph3">7</p>
+  <button id="squareNumbersButton">Вычислить квадраты</button>
+<script>
+  let paragraphs = document.querySelectorAll('p');
+  let squareNumbersButton = document.getElementById('squareNumbersButton');
+
+  squareNumbersButton.addEventListener('click', function() {
+    paragraphs.forEach(function(paragraph) {
+      let number = parseFloat(paragraph.textContent);
+      let square = Math.pow(number, 2);
+      paragraph.textContent = square;
+    });
+  });
+</script>
+
+</body>
+</html>

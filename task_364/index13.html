@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <a href="http://youtube.com">Ссылка </a>
+  <button id="addArrowButton">Добавить стрелку</button>
+<script>
+  let links = document.querySelectorAll('a');
+  let addArrowButton = document.getElementById('addArrowButton');
+
+  addArrowButton.addEventListener('click', function() {
+    links.forEach(function(link) {
+      if (link.href.startsWith('http://')) {
+        link.textContent += ' →';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

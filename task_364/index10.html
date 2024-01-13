@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <input id="numberInput" type="text" placeholder="Введите число">
+  <p id="resultParagraph"></p>
+<script>
+  let numberInput = document.querySelector('#numberInput');
+  let resultParagraph = document.querySelector('#resultParagraph');
+
+  numberInput.addEventListener('blur', function() {
+    let inputValue = numberInput.value;
+
+    if (containsDigitThree(inputValue)) {
+      resultParagraph.textContent = 'Число содержит цифру 3!';
+    } else {
+      resultParagraph.textContent = 'Число не содержит цифру 3.';
+    }
+  });
+
+  function containsDigitThree(number) {
+    return String(number).includes('3');
+  }
+</script>
+
+</body>
+</html>

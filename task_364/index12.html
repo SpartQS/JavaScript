@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <a href="https://youtube.com">Ссылка </a>
+  <button id="addHrefButton">Добавить href</button>
+<script>
+  let links = document.querySelectorAll('a');
+  let addHrefButton = document.getElementById('addHrefButton');
+
+  addHrefButton.addEventListener('click', function() {
+    links.forEach(function(link) {
+      link.textContent += ` (${link.href})`;
+    });
+  });
+</script>
+
+</body>
+</html>

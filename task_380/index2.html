@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+<p id="myParagraph">Этот текст может быть изменен</p>
+<button onclick="applyStyle('underline')">Подчеркнуть</button>
+<button onclick="applyStyle('bold')">Сделать жирным</button>
+<button onclick="applyStyle('red')">Сделать красным</button>
+
+
+<script>
+    function applyStyle(style) {
+        let myParagraph = document.getElementById('myParagraph');
+
+        switch (style) {
+            case 'underline':
+                myParagraph.style.textDecoration = 'underline';
+                break;
+            case 'bold':
+                myParagraph.style.fontWeight = 'bold';
+                break;
+            case 'red':
+                myParagraph.style.color = 'red';
+                break;
+        }
+    }
+</script>
+
+</html>

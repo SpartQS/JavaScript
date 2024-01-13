@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+<div id="myDiv">Текст в диве</div>
+<button id="myButton">Применить стили</button>
+
+<script>
+    let myDiv = document.getElementById('myDiv');
+    let myButton = document.getElementById('myButton');
+
+    myButton.addEventListener('click', function() {
+        myDiv.style.fontSize = '20px';         
+        myDiv.style.borderTop = '2px solid red'; 
+        myDiv.style.backgroundColor = 'lightblue'; 
+    });
+</script>
+
+
+</body>
+</html>

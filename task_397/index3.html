@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<input id="elem" type="text">
+<button onclick="checkDisabled()">Проверить блокировку</button>
+
+<script>
+    function checkDisabled() {
+        let elem = document.getElementById('elem');
+        console.log('Заблокирован: ' + elem.disabled);
+    }
+</script>
+    
+</html>

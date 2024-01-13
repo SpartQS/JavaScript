@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <input id="textInput" type="text" placeholder="Введите текст">
+<script>
+  let textInput = document.querySelector('#textInput');
+
+  textInput.addEventListener('blur', function() {
+  let textValue = textInput.value.trim();
+
+  let wordCount = textValue.split(/\s+/).filter(word => word.length > 0).length;
+  console.log('Количество слов: ' + wordCount);
+});
+</script>
+
+</body>
+</html>

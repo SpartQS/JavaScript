@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<input type="checkbox" id="elem">
+<button onclick="checkAndDisplay()">Узнать и вывести</button>
+<p id="output"></p>
+
+<script>
+    function checkAndDisplay() {
+        let elem = document.getElementById('elem');
+        let output = document.getElementById('output');
+
+        if (elem.checked) {
+            output.textContent = 'привет';
+        } else {
+            output.textContent = 'пока';
+        }
+    }
+</script>
+
+
+    
+</html>

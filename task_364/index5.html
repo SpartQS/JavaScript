@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <input id="fioInput" type="text" placeholder="Введите ФИО">
+  <input id="surnameInput" type="text" placeholder="Фамилия">
+  <input id="nameInput" type="text" placeholder="Имя">
+  <input id="patronymicInput" type="text" placeholder="Отчество">
+
+<script>
+ let fioInput = document.querySelector('#fioInput');
+  let surnameInput = document.querySelector('#surnameInput');
+  let nameInput = document.querySelector('#nameInput');
+  let patronymicInput = document.querySelector('#patronymicInput');
+
+  fioInput.addEventListener('blur', function() {
+    let fioValue = fioInput.value.trim();
+    let fioComponents = fioValue.split(' ');
+    surnameInput.value = fioComponents[0] || '';
+    nameInput.value = fioComponents[1] || '';
+    patronymicInput.value = fioComponents[2] || '';
+  });
+</script>
+
+</body>
+</html>

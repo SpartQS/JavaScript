@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <input id="fioInput" type="text" placeholder="Введите ФИО">
+
+<script>
+  let fioInput = document.querySelector('#fioInput');
+
+  fioInput.addEventListener('blur', function() {
+    let fioValue = fioInput.value.trim();
+
+  let formattedFIO = fioValue.replace(/\b\w/g, firstLetter => firstLetter.toUpperCase());
+  fioInput.value = formattedFIO;
+});
+</script>
+
+</body>
+</html>

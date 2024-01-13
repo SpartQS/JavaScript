@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+<div id="myDiv">Это див</div>
+<button id="myButton">Добавить стили</button>
+
+
+<script>
+    let myDiv = document.getElementById('myDiv');
+    let myButton = document.getElementById('myButton');
+
+ 
+    myButton.addEventListener('click', function() {
+       
+        myDiv.style.width = '200px';  
+        myDiv.style.height = '200px'; 
+        myDiv.style.border = '2px solid black'; 
+    });
+</script>
+
+</body>
+</html>

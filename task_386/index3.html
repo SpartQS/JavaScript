@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <ul>
+        <li>text</li>
+        <li>text</li>
+        <li id="elem">text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+
+<script>
+    let elem3 = document.getElementById('elem');
+    let nextSibling3 = elem3.nextElementSibling;
+    let nextNextSibling3 = nextSibling3.nextElementSibling;
+    nextNextSibling3.textContent += '!';
+</script>
+
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<ul id="numberList">
+  <li data-number="0">0</li>
+  <li data-number="1">1</li>
+  <li data-number="2">2</li>
+</ul>
+
+<script>
+  let listItems = document.querySelectorAll('#numberList li');
+
+  for (let listItem of listItems) {
+    listItem.addEventListener('click', handleClick);
+  }
+  function handleClick() {
+    let currentNumber = parseInt(this.getAttribute('data-number'));
+
+    if (currentNumber < 10) {
+      currentNumber++;
+      this.textContent = currentNumber;
+      this.setAttribute('data-number', currentNumber);
+    }
+  }
+</script>
+
+</body>
+</html>
