@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<img id="image" src="">
+    	<button onclick="changeImage('first')">Первая картинка</button>
+    	<button onclick="changeImage('second')">Вторая картинка</button>
+		
+		<script>
+	  	function changeImage(image) {
+            let yasuo = document.getElementById('image');
+			if (image == 'first') {
+                yasuo.src = 'A:/yasuo.jpg';
+            } 
+			if (image == 'second') {
+                yasuo.src = 'A:/ff15.jpg';
+            }
+        }
+		
+		</script>
+	</body>
+</html>

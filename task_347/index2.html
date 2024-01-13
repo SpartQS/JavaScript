@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		
+		<p id="elem">Yasuo</p>
+		<input id="button" type="submit">
+
+		
+		<script>
+
+		let elem = document.querySelector('#elem');
+		let button = document.querySelector('#button');
+		
+		button.addEventListener('click', function() {
+			elem.innerHTML = '<i><b>PENTAKILL!</b></i>';
+			console.log(elem.innerHTML); // выведет <b>text</b> 
+		});
+		
+		</script>
+	</body>
+</html>
