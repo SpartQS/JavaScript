@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Table Example</title>
+</head>
+<body>
+
+<div id="elem">
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+</div>
+
+<script>
+  function createTable(rows, cols) {
+    // Создаем элемент таблицы
+    let table = document.createElement('table');
+
+    // Создаем ячейки и добавляем их в таблицу
+    for (let i = 0; i < rows; i++) {
+      let row = table.insertRow();
+      for (let j = 0; j < cols; j++) {
+        let cell = row.insertCell();
+        cell.textContent = `Row ${i + 1}, Col ${j + 1}`;
+      }
+    }
+
+    // Возвращаем таблицу
+    return table;
+  }
+
+  // Получаем ссылку на div
+  let div = document.querySelector('#elem');
+
+  // Создаем таблицу и применяем стили
+  let table = createTable(3, 4);
+  table.style.color = 'red';
+
+  // Вставляем таблицу в конец div
+  div.appendChild(table);
+</script>
+
+</body>
+</html>

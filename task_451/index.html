@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout Example</title>
+</head>
+<body>
+
+    <p id="myParagraph">Этот абзац будет выведен через 10 секунд.</p>
+
+    <script>
+        // Получаем ссылку на абзац
+        let myParagraph = document.querySelector('#myParagraph');
+
+        // Используем setTimeout для задержки выполнения кода
+        setTimeout(function() {
+            // Выводим сообщение в абзац
+            myParagraph.textContent = 'Прошло 10 секунд!';
+        }, 10000); // 10000 миллисекунд = 10 секунд
+    </script>
+
+</body>
+</html>

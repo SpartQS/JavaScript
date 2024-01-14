@@ -1,0 +1,10 @@
+<!-- Добавляем к предыдущему коду -->
+<ul id="employeeList"></ul>
+
+<script>
+    employees.forEach(employee => {
+        const li = document.createElement('li');
+        li.textContent = `${employee.name}, ${employee.age}, ${employee.salary}`;
+        document.getElementById('employeeList').appendChild(li);
+    });
+</script>

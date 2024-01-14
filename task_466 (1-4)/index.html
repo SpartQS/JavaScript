@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Generation</title>
+</head>
+<body>
+
+  <!-- Задание 1 -->
+  <table id="table1" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 1
+    var table1 = document.getElementById("table1");
+    for (var i = 0; i < 5; i++) {
+      var row = table1.insertRow();
+      for (var j = 0; j < 5; j++) {
+        var cell = row.insertCell();
+      }
+    }
+  </script>
+
+  <!-- Задание 2 -->
+  <table id="table2" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 2
+    var table2 = document.getElementById("table2");
+    for (var i = 0; i < 10; i++) {
+      var row = table2.insertRow();
+      for (var j = 0; j < 5; j++) {
+        var cell = row.insertCell();
+      }
+    }
+  </script>
+
+  <!-- Задание 3 -->
+  <table id="table3" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 3
+    var table3 = document.getElementById("table3");
+    for (var i = 0; i < 10; i++) {
+      var row = table3.insertRow();
+      for (var j = 0; j < 5; j++) {
+        var cell = row.insertCell();
+        cell.textContent = 'x';
+      }
+    }
+  </script>
+
+  <!-- Задание 4 -->
+  <input type="number" id="widthInput" placeholder="Width">
+  <input type="number" id="heightInput" placeholder="Height">
+  <button onclick="generateTable()">Generate Table</button>
+  <table id="customTable" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 4
+    function generateTable() {
+      var width = document.getElementById("widthInput").value;
+      var height = document.getElementById("heightInput").value;
+
+      var customTable = document.getElementById("customTable");
+      customTable.innerHTML = "";
+
+      for (var i = 0; i < height; i++) {
+        var row = customTable.insertRow();
+        for (var j = 0; j < width; j++) {
+          var cell = row.insertCell();
+          cell.textContent = 'x';
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Elements into List</title>
+</head>
+<body>
+
+<ul id="elem">
+  <li>text</li>
+  <li>text</li>
+  <li>text</li>
+  <li>text</li>
+  <li>text</li>
+</ul>
+
+<script>
+  let elem = document.getElementById('elem');
+
+  // Вставка в начало списка
+  let startElement = document.createElement('li');
+  startElement.textContent = 'start';
+  elem.insertBefore(startElement, elem.firstElementChild);
+
+  // Вставка в конец списка
+  let finishElement = document.createElement('li');
+  finishElement.textContent = 'finish';
+  elem.appendChild(finishElement);
+</script>
+
+</body>
+</html>

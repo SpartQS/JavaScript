@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Highlight</title>
+    <style>
+        /* Add any additional styles you may need */
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+
+        .highlight {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="myTable">
+        <tr>
+            <td>Row 1</td>
+            <td><a href="#" onclick="toggleHighlight(this)">Toggle Highlight</a></td>
+        </tr>
+        <tr>
+            <td>Row 2</td>
+            <td><a href="#" onclick="toggleHighlight(this)">Toggle Highlight</a></td>
+        </tr>
+        <tr>
+            <td>Row 3</td>
+            <td><a href="#" onclick="toggleHighlight(this)">Toggle Highlight</a></td>
+        </tr>
+    </table>
+
+    <script>
+        function toggleHighlight(link) {
+            let row = link.parentNode.parentNode;
+            row.classList.toggle('highlight');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <div id="elem" tabindex="0">Click me (Hold Alt for Red)</div>
+
+    <script>
+    let elem = document.getElementById('elem');
+    
+    elem.addEventListener('click', function(event) {
+        if (event.altKey) {
+            elem.style.color = 'red';
+        }
+    });
+    </script>
+</body>
+</html>

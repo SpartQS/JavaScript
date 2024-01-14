@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul {
+            padding: 20px;
+            border: 1px solid orange;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 10px;
+            border: 1px solid green;
+            cursor: pointer;
+        }
+        i {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul id="list">
+        <li>Item <i>italic</i> item</li>
+        <li>Item <i>italic</i> item</li>
+        <li>Item <i>italic</i> item</li>
+        <li>Item <i>italic</i> item</li>
+        <li>Item <i>italic</i> item</li>
+    </ul>
+    
+    <script>
+        let list = document.getElementById('list');
+    
+        list.addEventListener('click', function(event) {
+            let li = event.target.closest('li');
+    
+            if (li) {
+                li.textContent += '!';
+            }
+        });
+    </script>
+
+</body>   
+</html>

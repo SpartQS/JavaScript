@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <select id="mySelect">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <button id="selectLastOptionBtn">Select Last Option</button>
+      
+      <script>
+      let select = document.getElementById('mySelect');
+      let selectLastOptionBtn = document.getElementById('selectLastOptionBtn');
+      
+      selectLastOptionBtn.addEventListener('click', function() {
+          select[select.options.length - 1].selected = true;
+      });
+      </script>
+      
+    </body>   
+</html>

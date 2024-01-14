@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <input type="checkbox" id="checkbox">
+    <div id="div"></div>
+    <button id="button">button</button>
+    
+    <script>
+    let checkbox = document.getElementById('checkbox');
+    let button = document.getElementById('button');
+    let div = document.getElementById('div');
+    
+    button.addEventListener('click', function() {
+        if (checkbox.checked) {
+            div.textContent = '111';
+        } else {
+            div.textContent = '222';
+        }
+    });
+    </script>
+    
+    
+    
+</body>     
+</html>

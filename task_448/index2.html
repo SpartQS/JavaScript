@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <input id="elem" value="10">
+
+  <script>
+      let elem = document.querySelector('#elem');
+
+      setInterval(function() {
+          elem.value = Number(elem.value) - 1;
+      }, 1000);
+  </script>
+  
+</body>   
+</html>

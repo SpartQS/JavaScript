@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div, ul, li {
+            padding: 20px;
+        }
+
+        div {
+            border: 1px solid red;
+        }
+
+        ul {
+            border: 1px solid orange;
+        }
+
+        li {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    
+    <script>
+    let container = document.getElementById('container');
+    
+    container.addEventListener('click', function(event) {
+        if (event.target.tagName === 'UL') {
+            console.log('Click event occurred in UL');
+        } else if (event.target.tagName === 'LI') {
+            event.target.textContent += '!';
+        }
+    });
+    </script>
+
+</body>   
+</html>

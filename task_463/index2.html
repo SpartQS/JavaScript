@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Element Type</title>
+</head>
+<body>
+
+<div id="elem">
+    <p>This is a paragraph.</p>
+</div>
+
+<script>
+    // Получаем ссылку на элемент
+    var element = document.getElementById("elem");
+
+    // Проверяем, является ли элемент абзацем
+    var isParagraph = element.tagName.toLowerCase() === "p";
+
+    // Выводим результат в консоль
+    console.log("Элемент " + (isParagraph ? "является" : "не является") + " абзацем.");
+</script>
+
+</body>
+</html>

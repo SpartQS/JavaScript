@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+	<p>Paragraph 1</p>
+	<p>Paragraph 2</p>
+	<p>Paragraph 3</p>
+	<script>
+		function appendText(elements, text) {
+			elements.forEach(element => {
+			if (element && element.nodeType === 1) {
+				element.textContent += text;
+			}
+			});
+		}
+
+		// Пример использования
+		let paragraphs = document.querySelectorAll('p');
+		appendText(paragraphs, ' Appended text');
+	  </script>
+</body>
+
+</html>

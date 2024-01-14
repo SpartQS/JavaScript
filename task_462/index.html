@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Input on Button Click</title>
+</head>
+<body>
+
+<input type="text" id="originalInput" placeholder="Type something">
+
+<button onclick="cloneInput()">Clone Input</button>
+
+<script>
+    function cloneInput() {
+        // Получаем ссылку на оригинальный инпут
+        var originalInput = document.getElementById("originalInput");
+
+        // Клонируем инпут
+        var clonedInput = originalInput.cloneNode(true);
+
+        // Генерируем уникальный ID для клонированного инпута
+        var uniqueId = "input_" + new Date().getTime();
+        clonedInput.setAttribute("id", uniqueId);
+
+        // Вставляем клонированный инпут после оригинального инпута
+        originalInput.parentNode.insertBefore(clonedInput, originalInput.nextSibling);
+    }
+</script>
+
+</body>
+</html>

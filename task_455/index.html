@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="z1.js"></script>
+</head>
+<body>
+    <ul id="myList"></ul>
+    <script>
+        var ulElement = document.getElementById('myList');
+
+        for (let i = 1; i <= 10; i++) {
+            var liElement = document.createElement('li');
+            liElement.textContent = i;
+            ulElement.appendChild(liElement);
+        }
+    </script>
+</body>
+</html>

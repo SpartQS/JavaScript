@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div, ul, li {
+            padding: 15px;
+        }
+
+        div {
+            border: 2px solid red;
+        }
+
+        ul {
+            border: 2px solid orange;
+        }
+
+        li {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    
+    <script>
+    let container = document.getElementById('container');
+    
+    container.addEventListener('click', function(event) {
+        if (event.target.tagName === 'DIV') {
+            alert('Произошло событие щелчка в DIV');
+        } else if (event.target.tagName === 'UL') {
+            alert('Произошло событие щелчка в UL');
+        } else if (event.target.tagName === 'LI') {
+            alert('Произошло событие щелчка в LI');
+        }
+    });
+    </script>
+
+</body>   
+</html>

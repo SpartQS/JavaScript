@@ -1,0 +1,16 @@
+<!-- Добавляем к предыдущему коду -->
+listElement.addEventListener('click', (event) => {
+    if (event.target.tagName === 'LI') {
+        // ... (предыдущий код)
+
+        const strikeLink = document.createElement('a');
+        strikeLink.href = '#';
+        strikeLink.textContent = 'Strike';
+
+        strikeLink.addEventListener('click', () => {
+            event.target.style.textDecoration = 'line-through';
+        });
+
+        event.target.appendChild(strikeLink);
+    }
+});

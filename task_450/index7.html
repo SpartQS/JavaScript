@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <p id="colorChangingParagraph">Color Changing Text</p>
+
+    <script>
+        let colorChangingParagraph = document.getElementById('colorChangingParagraph');
+        let intervalId7;
+    
+        setInterval(function () {
+            let currentColor = colorChangingParagraph.style.color;
+            colorChangingParagraph.style.color = (currentColor === 'red') ? 'green' : 'red';
+        }, 1000);
+    </script>
+    
+    
+  
+</body>   
+</html>

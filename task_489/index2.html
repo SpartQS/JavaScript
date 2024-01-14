@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+	<p>Paragraph 1</p>
+	<p>Paragraph 2</p>
+	<p>Paragraph 3</p>
+	<script>
+		function appendText(element, text) {
+			if (element) {
+			element.textContent += text;
+			} else {
+			console.error('Invalid element provided.');
+			}
+		}
+
+		// Получаем все абзацы
+		let paragraphs = document.querySelectorAll('p');
+
+		// Перебираем абзацы и добавляем '!' в конец каждого
+		paragraphs.forEach(paragraph => {
+			appendText(paragraph, '!');
+		});
+	  </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Generation</title>
+</head>
+<body>
+
+  <!-- Задание 1 -->
+  <table id="table1" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 1
+    var table1 = document.getElementById("table1");
+    var employees = [
+      { name: 'employee1', age: 30, salary: 400 },
+      { name: 'employee2', age: 31, salary: 500 },
+      { name: 'employee3', age: 32, salary: 600 },
+    ];
+
+    for (var i = 0; i < employees.length; i++) {
+      var row = table1.insertRow();
+      for (var key in employees[i]) {
+        var cell = row.insertCell();
+        cell.textContent = employees[i][key];
+      }
+    }
+  </script>
+
+  <!-- Задание 2 -->
+  <table id="table2" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 2
+    var table2 = document.getElementById("table2");
+    var employees2 = [
+      { name: 'employee1', age: 30, salary: 400 },
+      { name: 'employee2', age: 31, salary: 500 },
+      { name: 'employee3', age: 32, salary: 600 },
+    ];
+
+    for (var i = 0; i < employees2.length; i++) {
+      var row = table2.insertRow();
+      for (var key in employees2[i]) {
+        var cell = row.insertCell();
+        if (key === 'age') {
+          cell.textContent = employees2[i][key];
+          cell.addEventListener('click', function () {
+            this.textContent = parseInt(this.textContent) + 1;
+          });
+        } else {
+          cell.textContent = employees2[i][key];
+        }
+      }
+    }
+  </script>
+
+  <!-- Задание 3 -->
+  <table id="table3" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 3
+    var table3 = document.getElementById("table3");
+    var employees3 = [
+      { name: 'employee1', age: 30, salary: 400 },
+      { name: 'employee2', age: 31, salary: 500 },
+      { name: 'employee3', age: 32, salary: 600 },
+    ];
+
+    for (var i = 0; i < employees3.length; i++) {
+      var row = table3.insertRow();
+      for (var key in employees3[i]) {
+        var cell = row.insertCell();
+        if (key === 'salary') {
+          cell.textContent = employees3[i][key];
+          cell.addEventListener('click', function () {
+            this.textContent = parseFloat(this.textContent) * 1.1;
+          });
+        } else {
+          cell.textContent = employees3[i][key];
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

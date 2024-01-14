@@ -1,0 +1,25 @@
+<!-- Добавляем к предыдущему коду -->
+<div>
+    <input type="text" id="newName" placeholder="Name">
+    <input type="number" id="newAge" placeholder="Age">
+    <input type="number" id="newSalary" placeholder="Salary">
+    <button onclick="addEmployee()">Add Employee</button>
+</div>
+
+<script>
+    function addEmployee() {
+        const newName = document.getElementById('newName').value;
+        const newAge = document.getElementById('newAge').value;
+        const newSalary = document.getElementById('newSalary').value;
+
+        if (newName && newAge && newSalary) {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${newName}</td><td>${newAge}</td><td>${newSalary}</td>`;
+            tableBody.appendChild(row);
+
+            document.getElementById('newName').value = '';
+            document.getElementById('newAge').value = '';
+            document.getElementById('newSalary').value = '';
+        }
+    }
+</script>

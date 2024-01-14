@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <div id="elem"></div>
+
+  <script>
+    function createTableByArr(arr) {
+      // Создаем элементы таблицы
+      let table = document.createElement('table');
+  
+      // Перебираем строки массива
+      for (let i = 0; i < arr.length; i++) {
+          // Создаем элемент строки
+          let row = document.createElement('tr');
+  
+          // Перебираем элементы текущей строки массива
+          for (let j = 0; j < arr[i].length; j++) {
+              // Создаем элемент ячейки
+              let cell = document.createElement('td');
+  
+              // Устанавливаем текст ячейки из массива
+              cell.textContent = arr[i][j];
+  
+              // Добавляем ячейку в строку
+              row.appendChild(cell);
+          }
+  
+          // Добавляем строку в таблицу
+          table.appendChild(row);
+      }
+  
+      return table;
+    }
+  
+    // Пример использования
+    let div = document.getElementById('elem');
+    let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    let table = createTableByArr(arr);
+    div.appendChild(table);
+  </script>
+  
+
+</body>
+</html>

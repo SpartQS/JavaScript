@@ -1,0 +1,39 @@
+<!-- Добавляем форму для добавления нового работника -->
+<div>
+    <label for="newEmployeeName">Name:</label>
+    <input type="text" id="newEmployeeName" placeholder="Name">
+    <label for="newEmployeeAge">Age:</label>
+    <input type="number" id="newEmployeeAge" placeholder="Age">
+    <label for="newEmployeeSalary">Salary:</label>
+    <input type="number" id="newEmployeeSalary" placeholder="Salary">
+    <button onclick="addNewEmployee()">Add Employee</button>
+</div>
+
+<!-- Добавляем к предыдущему коду -->
+<script>
+    function addNewEmployee() {
+        const newName = document.getElementById('newEmployeeName').value;
+        const newAge = document.getElementById('newEmployeeAge').value;
+        const newSalary = document.getElementById('newEmployeeSalary').value;
+
+        if (newName && newAge && newSalary) {
+            const li = document.createElement('li');
+            li.innerHTML = `${newName}, ${newAge}, ${newSalary}`;
+
+            const deleteLink = document.createElement('a');
+            deleteLink.href = '#';
+            deleteLink.textContent = 'Delete';
+
+            deleteLink.addEventListener('click', () => {
+                li.remove();
+            });
+
+            li.appendChild(deleteLink);
+            document.getElementById('employeeList').appendChild(li);
+
+            document.getElementById('newEmployeeName').value = '';
+            document.getElementById('newEmployeeAge').value = '';
+            document.getElementById('newEmployeeSalary').value = '';
+        }
+    }
+</script>

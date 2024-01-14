@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+	<script>
+		let i = 0;
+
+		function timer() {
+			setTimeout(function () {
+				console.log(i++);
+				timer(); // вызовем сами себя
+			}, 1000);
+		}
+
+		timer();
+	</script>
+</body>
+
+</html>

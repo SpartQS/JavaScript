@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+  <input id="elem" value="привет">
+  <script>
+    let elem = document.getElementById('elem');
+  
+    function func(name, surname) {
+      console.log(this.value + ', ' + name + ' ' + surname);
+    }
+  
+    let boundFunc = func.bind(elem);
+  
+    boundFunc('Satoru', 'Sukune'); 
+    boundFunc('Skywhywalker', 'Enver'); 
+  </script>
+  
+
+</body>   
+</html>

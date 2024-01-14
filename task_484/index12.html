@@ -1,0 +1,16 @@
+<!-- Добавляем к предыдущему коду -->
+document.getElementById('employeeList').addEventListener('click', (event) => {
+    if (event.target.tagName === 'LI') {
+        // ... (предыдущий код)
+
+        const deleteLink = document.createElement('a');
+        deleteLink.href = '#';
+        deleteLink.textContent = 'Delete';
+
+        deleteLink.addEventListener('click', () => {
+            event.target.remove();
+        });
+
+        event.target.appendChild(deleteLink);
+    }
+});

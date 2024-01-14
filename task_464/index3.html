@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+	<div id="parent"></div>
+	<script>
+		let parent = document.querySelector('#parent');
+
+		let arr = [1, 2, 3, 4, 5];
+
+		for (let elem of arr) {
+			let p = document.createElement('p');
+			p.textContent = elem;
+
+			// Добавляем обработчик событий для каждого абзаца
+			p.addEventListener('click', function () {
+				// При клике увеличиваем содержимое на единицу
+				let currentValue = parseInt(this.textContent, 10);
+				this.textContent = currentValue + 1;
+			});
+
+			parent.appendChild(p);
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #block:not(.active) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="parent">
+        <button id="button">click me</button>
+        <div id="block">
+            text
+        </div>
+    </div>
+    
+    <script>
+    let parent = document.getElementById('parent');
+    let button = document.getElementById('button');
+    let block  = document.getElementById('block');
+    
+    button.addEventListener('click', function(event) {
+        block.classList.add('active');
+        event.stopPropagation(); 
+    });
+    
+    parent.addEventListener('click', function() {
+        block.classList.remove('active');
+    });
+    
+    </script>
+
+</body>   
+</html>

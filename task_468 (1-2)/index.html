@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Generation</title>
+</head>
+<body>
+
+  <!-- Задание 1 -->
+  <table id="table1" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 1
+    var table1 = document.getElementById("table1");
+    var arr1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
+
+    for (var i = 0; i < arr1.length; i++) {
+      var row = table1.insertRow();
+      for (var j = 0; j < arr1[i].length; j++) {
+        var cell = row.insertCell();
+        cell.textContent = arr1[i][j];
+      }
+    }
+  </script>
+
+  <!-- Задание 2 -->
+  <table id="table2" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 2
+    var table2 = document.getElementById("table2");
+    var arr2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
+
+    for (var i = 0; i < arr2.length; i++) {
+      var row = table2.insertRow();
+      for (var j = 0; j < arr2[i].length; j++) {
+        var cell = row.insertCell();
+        cell.textContent = arr2[i][j] ** 2; // Возводим в квадрат
+      }
+    }
+  </script>
+
+</body>
+</html>

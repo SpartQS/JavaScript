@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <select id="mySelect">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <button id="displaySelectedOptionBtn">Display Selected Option</button>
+      
+      <script>
+      let mySelect = document.getElementById('mySelect');
+      let displaySelectedOptionBtn = document.getElementById('displaySelectedOptionBtn');
+      
+      displaySelectedOptionBtn.addEventListener('click', function() {
+    
+          let selectedOption = mySelect[mySelect.selectedIndex];
+          console.log(selectedOption.text);
+      });
+      </script>
+      
+</body>  
+</html>

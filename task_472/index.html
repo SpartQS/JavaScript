@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление и удаление элементов</title>
+</head>
+<body>
+
+<ul id="parent">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<input type="submit" id="button">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let parent = document.querySelector('#parent');
+        let button = document.querySelector('#button');
+
+        // Функция для добавления нового элемента
+        function addNewElement() {
+            let li = document.createElement('li');
+            li.textContent = parent.children.length + 1;
+
+            li.addEventListener('click', function() {
+                this.remove();
+            });
+
+            parent.appendChild(li);
+        }
+
+        // Добавление нового элемента при клике на кнопку
+        button.addEventListener('click', addNewElement);
+
+        // Удаление элемента по клику на нем
+        parent.addEventListener('click', function(event) {
+            if (event.target.tagName === 'LI') {
+                event.target.remove();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <p id="result"></p>
+    <a href="#" id="calculateLink">Calculate Sum</a>
+    
+    <script>
+    let input1 = document.getElementById('input1');
+    let input2 = document.getElementById('input2');
+    let resultParagraph = document.getElementById('result');
+    let calculateLink = document.getElementById('calculateLink');
+    
+    calculateLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        let sum = parseFloat(input1.value) + parseFloat(input2.value);
+        resultParagraph.textContent = `Sum: ${sum}`;
+    });
+    </script>
+    
+</body>
+</html>

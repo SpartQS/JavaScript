@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Generation</title>
+</head>
+<body>
+
+  <!-- Задание 1 -->
+  <table id="table1" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 1
+    var table1 = document.getElementById("table1");
+    var count = 1;
+    for (var i = 0; i < 5; i++) {
+      var row = table1.insertRow();
+      for (var j = 0; j < 5; j++) {
+        var cell = row.insertCell();
+        cell.textContent = count++;
+      }
+    }
+  </script>
+
+  <!-- Задание 2 -->
+  <table id="table2" border="1">
+    <!-- Таблица будет заполнена с помощью скрипта -->
+  </table>
+
+  <script>
+    // Задание 2
+    var table2 = document.getElementById("table2");
+    var evenNumber = 2;
+    for (var i = 0; i < 10; i++) {
+      var row = table2.insertRow();
+      for (var j = 0; j < 5; j++) {
+        var cell = row.insertCell();
+        cell.textContent = evenNumber;
+        evenNumber += 2;
+      }
+    }
+  </script>
+
+</body>
+</html>

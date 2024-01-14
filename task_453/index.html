@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="z1.js"></script>
+	</head>
+	<body>
+		<ol id="elem"></ol>
+		<script>
+			var olElement = document.getElementById('elem');
+			var liElement = document.createElement('li');
+			liElement.textContent = 'item';
+			olElement.appendChild(liElement);
+		</script>
+	</body>
+</html>

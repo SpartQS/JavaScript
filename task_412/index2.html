@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <select id="mySelect">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <button id="addExclamationBtn">Add Exclamation to Selected Option</button>
+      
+      <script>
+      let mySelect = document.getElementById('mySelect');
+      let addExclamationBtn = document.getElementById('addExclamationBtn');
+      
+      addExclamationBtn.addEventListener('click', function() {
+          let selectedOption = mySelect[mySelect.selectedIndex];
+          
+          selectedOption.text += '!';
+      });
+      </script>
+      
+      
+    </body>   
+</html>

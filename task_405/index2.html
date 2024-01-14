@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <select id="select">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <p id="resultParagraph"></p>
+      <button id="button">Get Selected Option</button>
+      
+      <script>
+      let select = document.querySelector('#select');
+      let resultParagraph = document.querySelector('#resultParagraph');
+      let button = document.querySelector('#button');
+      
+      button.addEventListener('click', function() {
+          resultParagraph.textContent = 'Selected option: ' + select.value;
+      });
+      </script>
+      
+    </body>    
+</html>

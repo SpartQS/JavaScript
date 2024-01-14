@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Table Cell Text</title>
+    <style>
+        /* Add any additional styles you may need */
+        td {
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+    </table>
+
+    <script>
+        let cells = document.querySelectorAll('td');
+
+        for (let cell of cells) {
+            cell.addEventListener('click', function func() {
+                let input = document.createElement('input');
+                input.value = cell.textContent;
+
+                cell.textContent = '';
+                cell.appendChild(input);
+
+                input.addEventListener('blur', function() {
+                    cell.textContent = this.value;
+                    cell.addEventListener('click', func);
+                });
+
+                cell.removeEventListener('click', func);
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <input id="input1" maxlength="2">
+    <input id="input2" maxlength="2">
+    
+    <script>
+    let input1 = document.getElementById('input1');
+    let input2 = document.getElementById('input2');
+    
+    input1.addEventListener('input', function() {
+        if (this.value.length === 2) {
+            input2.focus();
+        }
+    });
+    
+    input2.addEventListener('input', function() {
+        if (this.value.length === 2) {
+            this.blur();
+        }
+    });
+    </script>
+    
+</body>      
+</html>

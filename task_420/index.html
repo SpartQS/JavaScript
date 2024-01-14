@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #elem1 {
+            width: 80px;
+            height: 80px;
+            margin: 30px;
+            padding: 20px;
+            background-color: green;
+        }
+
+        #elem2 {
+            width: 90px;
+            height: 90px;
+            margin: 30px;
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        #elem3 {
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            padding: 20px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="elem1">
+        <div id="elem2">
+            <div id="elem3"></div>
+        </div>
+    </div>
+    
+    <script>
+    let elem1 = document.querySelector('#elem1');
+    let elem2 = document.querySelector('#elem2');
+    let elem3 = document.querySelector('#elem3');
+    
+    elem1.addEventListener('click', function() {
+        alert('Green block clicked');
+    });
+    
+    elem2.addEventListener('click', function() {
+        alert('Lightblue block clicked');
+    });
+    
+    elem3.addEventListener('click', function() {
+        alert('Red block clicked');
+    });
+    </script>
+
+</body>   
+</html>

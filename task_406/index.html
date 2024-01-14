@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <select id="dayOfWeekSelect">
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+        <option value="7">Sunday</option>
+      </select>
+      <p id="dayTypeResult"></p>
+      
+      <script>
+      let dayOfWeekSelect = document.querySelector('#dayOfWeekSelect');
+      let dayTypeResult = document.querySelector('#dayTypeResult');
+      
+      dayOfWeekSelect.addEventListener('change', function() {
+          const selectedDay = parseInt(dayOfWeekSelect.value);
+          const isWeekend = selectedDay === 6 || selectedDay === 7;
+      
+          dayTypeResult.textContent = isWeekend ? 'Это выходной день!' : 'Это рабочий день.';
+      });
+      </script>
+      
+      
+      
+    </body>   
+</html>

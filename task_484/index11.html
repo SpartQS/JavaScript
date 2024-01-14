@@ -1,0 +1,16 @@
+<!-- Добавляем к предыдущему коду -->
+document.getElementById('employeeList').addEventListener('click', (event) => {
+    if (event.target.tagName === 'LI') {
+        const input = document.createElement('input');
+        input.value = event.target.textContent;
+
+        input.addEventListener('blur', () => {
+            event.target.textContent = input.value;
+            input.remove();
+        });
+
+        event.target.textContent = '';
+        event.target.appendChild(input);
+        input.focus();
+    }
+});

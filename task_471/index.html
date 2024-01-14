@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <button id="increaseButton">Увеличить числа</button>
+
+    <script>
+        document.getElementById('increaseButton').addEventListener('click', function () {
+            let tds = document.querySelectorAll('#table td');
+
+            tds.forEach(function (td) {
+                let currentValue = parseInt(td.textContent, 10);
+                if (!isNaN(currentValue)) {
+                    td.textContent = currentValue * 2;
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
